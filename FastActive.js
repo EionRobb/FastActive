@@ -1,5 +1,5 @@
 (function (d, w, activeClass) {
-    var hasTouch = (('ontouchstart' in w) || w.DocumentTouch && d instanceof DocumentTouch);
+    var hasTouch = (('ontouchstart' in w) || w.DocumentTouch && d instanceof DocumentTouch || navigator.msMaxTouchPoints);
     if (!hasTouch) {
         d.documentElement.classList.add('no-touch');
     } else {
